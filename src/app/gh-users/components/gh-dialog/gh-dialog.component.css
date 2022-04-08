@@ -1,0 +1,205 @@
+.principal{
+    height: fit-content;
+    width: fit-content;
+    background: rgb(188, 188, 188);
+    border-radius: 25px;
+    /*width: 200vh;
+    height: 200vh;*/
+}
+
+/*mat-dialog-content{
+    height:fit-content;
+    width: fit-content;
+}*/
+
+h1{
+    text-align: center;
+}
+
+/*.container{
+    height:fit-content;
+    width: fit-content;
+}*/
+
+.infoP{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*padding: 15px;
+    margin: 5px;*/
+}
+
+.info{
+    margin: 15px;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+.conteudoInt{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows:  1fr 1fr;
+    grid-template-areas: 
+        'photo infoS'
+        'bio infoD'
+    ;
+}
+
+.photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center;
+    
+}
+
+
+img{
+    margin: 0px 0px 0px 0px;
+    padding: 0px;
+    height:80%;
+    width: 60%; 
+    border-radius: 50%;
+    
+}
+
+.infoS{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+   /* padding: 5px;
+    margin: 5px;*/
+    /*border: solid black 1px;
+    background: rgb(220, 220, 255);*/
+}
+
+.Personal_data{
+    /*width: max-content;
+    margin: 2em;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bio {
+    margin: 15px;
+    padding: 5px;
+    border-radius: 25px;
+    text-align: justify;
+    /*border: solid black 1px;
+    background: rgb(220, 220, 255);*/
+}
+
+.infoD{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 25px;
+    padding-bottom: 55px;
+    /*padding: 5px;
+    margin: 5px;*/
+    /*border: solid black 1px;
+    background: rgb(220, 220, 255);*/ 
+}
+
+.repo{
+    padding: 5px;
+    margin: 15px;
+    border-radius: 25px;
+}
+
+.all_repo{
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    margin: 5px;
+    padding: 5px;
+}
+
+.ngFor{
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+    /*border: solid black 0.5px;*/  
+    border-radius: 25px;
+    /*width: 75%;
+    height: 50%;*/
+}
+
+.repo_name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.repos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.repo_info{
+    margin: 15px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.btn-repo{
+    text-align: center;
+}
+
+.btn-repo2{
+    color: white;
+    /*font-size: large;
+    border-radius: 5px;
+    background-color: rgb(0, 13, 128);
+    height: 40px;*/
+}
+
+/*.link_reepo{
+    color: white;
+}*/
+
+.btn_final{
+    color: white;
+    font-size: large;
+    border-radius: 5px;
+    background-color: rgb(0, 13, 128);
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

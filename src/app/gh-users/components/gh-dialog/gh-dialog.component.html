@@ -1,0 +1,132 @@
+<div class="principal">
+    <mat-dialog-content>
+
+        <h1 mat-dialog-title>Some localized information of the user <b> {{ username }} </b> </h1>
+       
+        <!--{{user | json}} irá mostrar tudo que estiver dentro de USER-->
+       
+       <mat-progress-spinner color="accent" mode="indeterminate" *ngIf="user == null; else content"> </mat-progress-spinner>
+       
+       <ng-template #content>
+        
+            <div class="container">
+
+                <div class="infoP">
+
+                   <a [href]="user?.html_url" target="_blank">
+                    {{ user?.name }}
+                    </a>
+
+                </div>
+
+                <p class="info"><b>General Information: </b></p>
+
+                    <div class="conteudoInt">
+               
+                        <div class="photo">
+
+                                <img [src]="user?.avatar_url" alt="user_photo">
+
+                        </div>
+
+                        <div class="infoS">
+
+                            <div class="Personal_data">
+                                <mat-icon>account_circle</mat-icon>
+                                <span> <b> User Name </b></span>
+                                <span class="bold">{{ user?.login }}</span>
+                            </div>
+                        
+                            <div class="Personal_data">
+                                <mat-icon>person_add</mat-icon>
+                                <span> <b> Followers </b> </span>
+                                <span class="bold">{{ user?.followers }}</span>
+                            </div>
+
+                            <div class="Personal_data">
+                                <mat-icon>group_add</mat-icon>
+                                <span> <b> Following </b> </span>
+                                <span class="bold">{{ user?.following }}</span>
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="bio">
+                            <p><b>Biography: </b></p>
+                            <span> {{user?.bio}}</span>
+                            <p></p>
+                        </div>
+                    
+                        <div class="infoD">
+
+                            <div class="Personal_data">
+                                <mat-icon>public</mat-icon>
+                                <span> <b> Public Repos </b ></span>
+                                    <span class="bold">{{ user?.public_repos }}</span>
+                            </div>
+                    
+                            <div class="Personal_data">
+                                <mat-icon>today</mat-icon>
+                                <span> <b> Date Of Create </b> </span>
+                                <span class="bold">{{ user?.created_at | date }}</span>
+                                
+                            </div>
+    
+                            <div class="Personal_data">
+                                <span><mat-icon>location_on</mat-icon></span>
+                                <span> <b> Location </b> </span>
+                                <span class="bold"> {{ user?.location }} </span>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                <p class="repo"><b>Repositories: </b></p>
+                <span class="repo">*Click on the repository name to be redirected</span>
+
+                <div class="all_repo">
+                    
+                    <div class="ngFor" *ngFor="let index of ghRepositories">
+                      
+                        <div class="repo_name">
+                            <mat-icon>folder</mat-icon> 
+                            <span> <b> Repository Name </b> </span>
+                            <a class="link_reepo" [href]="index.html_url" target="_blank">{{ index.name }}</a>
+                        </div>
+
+                        <div class="repos">
+                            <div class="repo_info">
+                                <mat-icon>star_border</mat-icon> 
+                                <span> Stars: </span>
+                                <span class="bold">{{ index.stargazers_count }}</span> 
+                            </div>
+                            
+                            <div class="repo_info">
+                                <mat-icon>language</mat-icon>
+                                <span>Language:</span>
+                                <span class="bold">{{ index.language }}</span>
+                            </div>
+                        </div>
+                        
+                        <div class="btn-repo"> 
+                            
+                        </div>
+                      
+                      
+                    </div>
+
+                </div>
+            
+            </div>
+      
+       </ng-template>
+
+    </mat-dialog-content>
+
+</div>
+
+<div mat-dialog-actions>
+    <button class="btn_final" mat-button mat-dialog-close appearance="accent">OK</button>
+</div>
